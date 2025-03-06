@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#homePage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background:url(media/home-bg1.jpg);
+    background-size:cover;
+    position: relative;
+}
+
+#homePage a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(125, 245, 125);
+    border: none;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+    font-weight: 800;
+    transition: 0.25s;
+}
+
+#homePage a:hover{
+    transform: translate(5px);
+    box-shadow: none;
+}
+
+#gamePage{
+    height: 100vh;
+    width: 100vw;
+    background: url(media/board.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#btn2{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: navajowhite;
+}
+#btn1{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+#btn1 a{
+    text-decoration: none;
+
+}
+#main{
+    padding: 50px;
+    height: 50vh;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    animation: load 0.3s ease-out;
+}
+.items{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    transform: 0.25s;
+    transform: rotateY(0deg);
+
+}
+.items::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(51, 30, 30);
+    transition: 0.25s;
+    backface-visibility: hidden;
+}
+.items.boxOpen{
+    transform: rotateY(0deg);
+}
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
+
+@keyframes load {
+    0%{
+        scale: -1;
+    }
+    100%{
+        scale: 1;
+    }
+ 
+}
+
+#Scores{
+    height: 100vh;
+    width: 100vw;
+    background-color: burlywood;
+    padding: 40px;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#Scores > a > svg{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+#about{
+    height: 100vh;
+    width: 100vw;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    line-height: 60px;
+    flex-direction: column;
+}
