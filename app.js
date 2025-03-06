@@ -3,7 +3,7 @@ const emojies = ["🥰","🥰","😂","😂","🤣","🤣","😅","😅","🥹",
 let shuffled = emojies.sort(() => (Math.random() > .5 ? 2 : -1));
 
 let score = 0;
-let moves = 0;
+
 for(let i = 0;i < emojies.length;i++){
     let box = document.createElement('div');
     box.className = 'items';
@@ -22,7 +22,7 @@ for(let i = 0;i < emojies.length;i++){
 
                     score += 10;
                     moves++;
-                    document.getElementById('score').innerHTML=`Score : ${score} \nMoves : ${moves}`
+                    document.getElementById('score').innerHTML=`Score : ${score}`
 
                     if(documen.querySelectorAll('.boxMatch') == shuffled.length){
                         alert(`You completed Game in ${moves} moves`);
