@@ -135,6 +135,6 @@
     padding: 30px;
     display: flex;
     align-items: center;
-    line-height: 60px;
+    line-height: 50px;
     flex-direction: column;
 }
