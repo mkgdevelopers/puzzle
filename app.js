@@ -1,13 +1,12 @@
 const emojies = ["🥰","🥰","😂","😂","🤣","🤣","😅","😅","🥹","🥹","😇","😇","😊","😊","😎","😎"];
 
-let shuffled = emojies.sort(() => (Math.random() > .5 ? 2 : -1));
+let shuffeld = emojies.sort(() => (Math.random() > .5 ? 2 : -1));
 
 let score = 0;
-
 for(let i = 0;i < emojies.length;i++){
     let box = document.createElement('div');
     box.className = 'items';
-    box.innerHTML = shuffled[i];
+    box.innerHTML = shuffeld[i];
 
     box.onclick = function(){
         box.classList.add('boxOpen');
@@ -21,12 +20,7 @@ for(let i = 0;i < emojies.length;i++){
                     document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch');
 
                     score += 10;
-                    moves++;
                     document.getElementById('score').innerHTML=`Score : ${score}`
-
-                    if(documen.querySelectorAll('.boxMatch') == shuffled.length){
-                        alert(`You completed Game in ${moves} moves`);
-                    }
 
 
                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
@@ -41,8 +35,4 @@ for(let i = 0;i < emojies.length;i++){
         },500)
     }
     document.getElementById('main').appendChild(box)
-}
-
-function relod(){
-location.reload()
 }
