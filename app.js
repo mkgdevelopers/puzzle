@@ -36,3 +36,8 @@ for(let i = 0;i < emojies.length;i++){
     }
     document.getElementById('main').appendChild(box)
 }
+
+function relod(){
+    location.reload();
+    alert("Testing...")
+}
