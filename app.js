@@ -39,5 +39,4 @@ for(let i = 0;i < emojies.length;i++){
 
 function relod(){
 location.reload()
-alert("Testing...")
 }
