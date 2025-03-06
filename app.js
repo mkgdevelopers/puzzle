@@ -1,6 +1,6 @@
 const emojies = ["🥰","🥰","😂","😂","🤣","🤣","😅","😅","🥹","🥹","😇","😇","😊","😊","😎","😎"];
 
-let shuffldd = emojies.sort(() => (Math.random() > .5 ? 2 : -1));
+let shuffled = emojies.sort(() => (Math.random() > .5 ? 2 : -1));
 
 let score = 0;
 let moves = 0;
